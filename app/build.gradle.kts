@@ -72,4 +72,16 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Ktor client de base
+    implementation(libs.ktor.client.core)
+
+    // Moteur Android pour Ktor (à utiliser pour Android Lollipop et supérieur)
+    implementation(libs.ktor.client.android)
+
+    // (Optionnel) Sérialisation JSON
+    implementation(libs.ktor.client.serialization)
+
+    // (Optionnel) Pour le logging des requêtes
+    implementation(libs.ktor.client.logging)
 }
