@@ -1,4 +1,4 @@
-package com.example.d1_p2.ui.theme
+package org.mathieu.sandboxdiiage12027.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -34,7 +34,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun D1P2Theme(
+fun SandboxDiiage12027Theme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

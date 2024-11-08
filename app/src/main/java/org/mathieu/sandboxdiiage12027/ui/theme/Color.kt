@@ -1,4 +1,4 @@
-package com.example.d1_p2.ui.theme
+package org.mathieu.sandboxdiiage12027.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

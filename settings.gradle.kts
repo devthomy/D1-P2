@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "D1-P2"
+rootProject.name = "Sandbox Diiage 1 2027"
 include(":app")
