@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import org.mathieu.sandboxdiiage12027.ui.screens.LoginScreen
 import org.mathieu.sandboxdiiage12027.ui.theme.SandboxDiiage12027Theme
 
 class MainActivity : ComponentActivity() {
@@ -11,9 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            SandboxDiiage12027Theme {
-
-            }
+            LoginScreen()
         }
     }
 }
