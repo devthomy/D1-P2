@@ -73,6 +73,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    val nav_version = "2.8.4"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
     // Ktor client de base
     //implementation(libs.ktor.client.core)
 

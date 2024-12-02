@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- Material colors -->
+<color name="primary">@color/blue_whale</color>
+<color name="onPrimary">@color/white</color>
+<color name="secondary">@color/amber</color>
+<color name="onSecondary">@color/madras</color>
+<color name="background">@color/cod_gray</color>
+<color name="onBackground">@color/white</color>
+
+</resources>
