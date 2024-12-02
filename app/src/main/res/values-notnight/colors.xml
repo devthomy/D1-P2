@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <!-- Material colors -->
+    <color name="primary">@color/anakiwa</color>
+    <color name="onPrimary">@color/white</color>
+    <color name="secondary">@color/xmas_green</color>
+    <color name="onSecondary">@color/white</color>
+    <color name="tertiary">@color/xmas_gold</color>
+    <color name="onTertiary">@color/white</color>
+    <color name="background">@color/white</color>
+    <color name="onBackground">@color/black</color>
+
+</resources>
