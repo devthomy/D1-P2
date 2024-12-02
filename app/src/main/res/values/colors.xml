@@ -2,16 +2,13 @@
 <resources>
     <color name="blue_whale">#04244B</color>
     <color name="amber">#FFC000</color>
-    <color name="anakiwa">#97CDFF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
     <color name="bright_red">#AA0000</color>
     <color name="genoa">#17895B</color>
     <color name="alto">#D9D9D9</color>
-
-    <color name="xmas_green">#004d00</color>
-    <color name="xmas_red">#E21B1B</color>
-    <color name="xmas_gold">#FFD807</color>
+    <color name="cod_gray">#1E1E1E</color>
+    <color name="madras">#483601</color>
 
     <!-- Business colors -->
     <color name="success">#17895B</color>
@@ -22,8 +19,6 @@
     <color name="onPrimary"/>
     <color name="secondary"/>
     <color name="onSecondary"/>
-    <color name="tertiary"/>"/>
-    <color name="onTertiary"/>
     <color name="background"/>
     <color name="onBackground"/>
     <color name="error">@color/bright_red</color>

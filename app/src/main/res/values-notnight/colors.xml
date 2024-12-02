@@ -2,12 +2,10 @@
 <resources>
 
     <!-- Material colors -->
-    <color name="primary">@color/anakiwa</color>
+    <color name="primary">@color/blue_whale</color>
     <color name="onPrimary">@color/white</color>
-    <color name="secondary">@color/xmas_green</color>
-    <color name="onSecondary">@color/white</color>
-    <color name="tertiary">@color/xmas_gold</color>
-    <color name="onTertiary">@color/white</color>
+    <color name="secondary">@color/amber</color>
+    <color name="onSecondary">@color/madras</color>
     <color name="background">@color/white</color>
     <color name="onBackground">@color/black</color>
 

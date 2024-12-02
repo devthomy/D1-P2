@@ -23,6 +23,9 @@ fun LoginCard(
             .fillMaxWidth()
             .padding(16.dp),
         shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primary
+        ),
         elevation = CardDefaults.cardElevation(8.dp)
     ) {
         Column(
@@ -35,7 +38,8 @@ fun LoginCard(
             Text(
                 text = "Connexion",
                 style = MaterialTheme.typography.headlineSmall,
-                fontSize = 20.sp
+                fontSize = 20.sp,
+                color = MaterialTheme.colorScheme.onPrimary // Contraste sur fond primaire
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -43,7 +47,8 @@ fun LoginCard(
             // Username input
             Text(
                 text = "Nom d'utilisateur",
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onPrimary
             )
             OutlinedTextField(
                 value = username,
@@ -57,7 +62,8 @@ fun LoginCard(
             // Password input
             Text(
                 text = "Mot de passe",
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onPrimary
             )
             OutlinedTextField(
                 value = password,
@@ -72,7 +78,11 @@ fun LoginCard(
             // Login button
             Button(
                 onClick = { onLoginClick(username, password) },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.secondary,
+                    contentColor = MaterialTheme.colorScheme.onSecondary
+                )
             ) {
                 Text(text = "Se connecter")
             }
