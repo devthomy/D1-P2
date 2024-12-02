@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red_200">#FFD63D2E</color>
+
+
+
+    <!-- Material colors -->
+    <color name="primary"/>
+    <color name="onPrimary"/>
+    <color name="secondary"/>
+    <color name="onSecondary"/>
+    <color name="tertiary"/>"/>
+    <color name="onTertiary"/>
+    <color name="background"/>
+    <color name="onBackround"/>
+    <color name="error">@color/red_200</color>
+
 </resources>
