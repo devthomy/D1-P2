@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Material colors -->
-    <color name="primary">@color/anakiwa</color>
+    <color name="primary">@color/blue_whale</color>
     <color name="onPrimary">@color/white</color>
     <color name="secondary">@color/xmas_green</color>
     <color name="onSecondary">@color/white</color>

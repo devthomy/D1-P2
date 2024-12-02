@@ -60,6 +60,10 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    val composeVersion = "1.5.4" // or whatever version you're using
+    
+    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
+
     // Coil
     implementation(libs.coil)
     implementation(libs.coil.compose)
