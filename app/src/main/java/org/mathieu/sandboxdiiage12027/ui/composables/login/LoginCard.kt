@@ -17,11 +17,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.mathieu.sandboxdiiage12027.R
-
-@Preview("login card")
 @Composable
 fun LoginCard(
-    onLoginClick: (username: String, password: String) -> Unit = { _, _ -> }
+    onLoginClick: (username: String, password: String) -> Unit = { _, _ -> },
+    onNavigate: () -> Unit = {}
 ) {
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -36,7 +35,7 @@ fun LoginCard(
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = (colorResource(R.color.primary))
+            containerColor = MaterialTheme.colorScheme.primary
         )
     ) {
         Column(
@@ -47,44 +46,47 @@ fun LoginCard(
         ) {
             // Title
             Text(
-                text = "Connexion", // Replace with stringResource(R.string.connection) for localization
+                text = "Connexion",
                 style = MaterialTheme.typography.headlineSmall,
                 fontSize = 25.sp,
-                color = colorResource(R.color.alto)
-
+                color = MaterialTheme.colorScheme.onPrimary
             )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             // Username input
             Text(
-                text = "Nom d'utilisateur", // Replace with stringResource(R.string.username)
+                text = "Nom d'utilisateur",
                 style = MaterialTheme.typography.bodyMedium,
-                color = colorResource(R.color.alto)
+                color = MaterialTheme.colorScheme.onPrimary
             )
             OutlinedTextField(
                 value = username,
                 onValueChange = { username = it },
-                modifier = Modifier.fillMaxWidth().background(colorResource(R.color.alto)),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(MaterialTheme.colorScheme.background),
                 singleLine = true,
-                placeholder = { Text(text = "Entrez votre nom d'utilisateur") } // Optional placeholder
+                placeholder = { Text(text = "Entrez votre nom d'utilisateur") }
             )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             // Password input
             Text(
-                text = "Mot de passe", // Replace with stringResource(R.string.password)
+                text = "Mot de passe",
                 style = MaterialTheme.typography.bodyMedium,
-                color = colorResource(R.color.alto)
+                color = MaterialTheme.colorScheme.onPrimary
             )
             OutlinedTextField(
                 value = password,
                 onValueChange = { password = it },
-                modifier = Modifier.fillMaxWidth().background(colorResource(R.color.alto)),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(MaterialTheme.colorScheme.background),
                 singleLine = true,
                 visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
-                placeholder = { Text(text = "Entrez votre mot de passe") }, // Optional placeholder
+                placeholder = { Text(text = "Entrez votre mot de passe") },
                 trailingIcon = {
                     val icon = if (passwordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff
                     IconButton(onClick = { passwordVisible = !passwordVisible }) {
@@ -97,24 +99,26 @@ fun LoginCard(
 
             // Login button
             Button(
-                onClick = { onLoginClick(username, password) },
-                modifier = Modifier
-                    .fillMaxWidth(),
+                onClick = {
+                    onLoginClick(username, password)
+                    if (isLoginEnabled) onNavigate()
+                },
+                modifier = Modifier.fillMaxWidth(),
                 enabled = isLoginEnabled,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(R.color.amber),
-                    contentColor = colorResource(R.color.amber),
-                    disabledContainerColor = colorResource(R.color.amber),
-                    disabledContentColor = colorResource(R.color.white),
+                    containerColor = MaterialTheme.colorScheme.secondary,
+                    contentColor = MaterialTheme.colorScheme.onSecondary,
+                    disabledContainerColor = MaterialTheme.colorScheme.secondary,
+                    disabledContentColor = MaterialTheme.colorScheme.onSecondary,
                 )
             ) {
-                Text(text = "Se connecter") // Replace with stringResource(R.string.login)
+                Text(text = "Se connecter")
             }
 
             Spacer(modifier = Modifier.height(24.dp))
 
             Text(
-                color = colorResource(R.color.alto),
+                color = MaterialTheme.colorScheme.onPrimary,
                 fontSize = 15.sp,
                 text = "Mot de passe oublié ?"
             )
